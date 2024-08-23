@@ -4,12 +4,8 @@ from HigherLowerHelper import data, logo, vs
 def populate():
     """Populates a choice with a option from the data list"""
     return random.choice(data)
-def reentry(a,b):
-    """Makes sure the entries aren't equal"""
-    if a==b:
-        b = populate()
-
 def print_layout(a,b,score):
+    """Makes sure the entries aren't equal"""
     """prints the layout of the game every turn"""
     if(a==b):
         b = populate()
@@ -27,7 +23,6 @@ print_layout(player_A,player_B,score)
     
 game_over = False
 while not game_over:
-
     answer = input("Who has more followers? Type 'A' or 'B': ").upper()
     if player_A['follower_count'] > player_B['follower_count']:
         if answer == "A":
