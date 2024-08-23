@@ -24,6 +24,7 @@ print_layout(player_A,player_B,score)
 game_over = False
 while not game_over:
     answer = input("Who has more followers? Type 'A' or 'B': ").upper()
+    print("\n" * 20)
     if player_A['follower_count'] > player_B['follower_count']:
         if answer == "A":
             score+=1
